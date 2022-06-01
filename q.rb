@@ -5,20 +5,20 @@
 class Q < Formula
   desc ""
   homepage "https://github.com/natesales/repo"
-  version "0.6.0"
+  version "0.7.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/natesales/q/releases/download/v0.6.0/q_0.6.0_darwin_arm64.tar.gz"
-      sha256 "035504311fafa82778fe7c572a8a56eae014a6d659254dc14bde943cc0ade914"
+      url "https://github.com/natesales/q/releases/download/v0.7.1/q_0.7.1_darwin_arm64.tar.gz"
+      sha256 "3291e5bb5cd6034794985df9efa10e62f2caf4c6c73cdcd29dfcdbfc8db37749"
 
       def install
         bin.install "q"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/natesales/q/releases/download/v0.6.0/q_0.6.0_darwin_amd64.tar.gz"
-      sha256 "3f60de1b8dffbb8c15e75b8d1a454819c53efa9ce2bafa99b833e762f3ecd873"
+      url "https://github.com/natesales/q/releases/download/v0.7.1/q_0.7.1_darwin_amd64.tar.gz"
+      sha256 "d760f0d022399aaae0786a6e0e52b74cd0ce5b6b05d0fc92774dfa844a9cbdd7"
 
       def install
         bin.install "q"
@@ -28,16 +28,16 @@ class Q < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/natesales/q/releases/download/v0.6.0/q_0.6.0_linux_arm64.tar.gz"
-      sha256 "342dc94e555548def25933e15d64ec049d8f60c8a54c3efd6905761574860fa4"
+      url "https://github.com/natesales/q/releases/download/v0.7.1/q_0.7.1_linux_arm64.tar.gz"
+      sha256 "75c2c7c550c6682341d40b1ef09d334d751d67c863cba83ed6807cd472cde72e"
 
       def install
         bin.install "q"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/natesales/q/releases/download/v0.6.0/q_0.6.0_linux_amd64.tar.gz"
-      sha256 "4b7d8492664ba5ca53cd80b5f9a6810e0418bb121c5d0c8e2e2eb21f066db457"
+      url "https://github.com/natesales/q/releases/download/v0.7.1/q_0.7.1_linux_amd64.tar.gz"
+      sha256 "35c884913555d018c6c10f4ebed250c4f559f7f9a3d7080fcf9af8f6727b5afb"
 
       def install
         bin.install "q"
