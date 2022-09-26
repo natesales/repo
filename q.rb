@@ -5,20 +5,20 @@
 class Q < Formula
   desc ""
   homepage "https://github.com/natesales/repo"
-  version "0.8.2"
+  version "0.8.3"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/natesales/q/releases/download/v0.8.2/q_0.8.2_darwin_arm64.tar.gz"
-      sha256 "cb6387b396b92ab7cab37bf60f53f04ad3ea2d1c66f70d39c577d89243e11663"
+    if Hardware::CPU.intel?
+      url "https://github.com/natesales/q/releases/download/v0.8.3/q_0.8.3_darwin_amd64.tar.gz"
+      sha256 "2032f9f4df43e818027b2ed78a2fa28202249bc08f567bd2d9ae6dcbbb3ac2c4"
 
       def install
         bin.install "q"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/natesales/q/releases/download/v0.8.2/q_0.8.2_darwin_amd64.tar.gz"
-      sha256 "2bcb03ab98d50019412d2ed027ea8852ff8cfc7131f372cac95ef055297d0b2f"
+    if Hardware::CPU.arm?
+      url "https://github.com/natesales/q/releases/download/v0.8.3/q_0.8.3_darwin_arm64.tar.gz"
+      sha256 "b2527463a6c5ff5596a9032f170e8e9ba272f235a13e3ed99d59720815105449"
 
       def install
         bin.install "q"
@@ -27,17 +27,17 @@ class Q < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/natesales/q/releases/download/v0.8.2/q_0.8.2_linux_amd64.tar.gz"
-      sha256 "fb95a998aaf3a14ebdbd21e6d627737333451fc35e2d9c0fce7fd272fee42fc8"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/natesales/q/releases/download/v0.8.3/q_0.8.3_linux_arm64.tar.gz"
+      sha256 "72698d3bb1ed33660452963b787de1cb0419c2b646b6594e6425f5385d89904d"
 
       def install
         bin.install "q"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/natesales/q/releases/download/v0.8.2/q_0.8.2_linux_arm64.tar.gz"
-      sha256 "227119fbcfce9cf41658f7dc8ff3289586d3cab9fc703a4426fd11050dbc672f"
+    if Hardware::CPU.intel?
+      url "https://github.com/natesales/q/releases/download/v0.8.3/q_0.8.3_linux_amd64.tar.gz"
+      sha256 "550867cd64822f56f5eb0a9bf584a896554c3d496eb5cf2362773117c1c3fffe"
 
       def install
         bin.install "q"
