@@ -5,20 +5,20 @@
 class Q < Formula
   desc ""
   homepage "https://github.com/natesales/repo"
-  version "0.11.1"
+  version "0.11.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/natesales/q/releases/download/v0.11.1/q_0.11.1_darwin_amd64.tar.gz"
-      sha256 "27681431213d9a192a7d0bc5870de44113d76ba0e34fef23c6f96afa5f58b0e6"
+      url "https://github.com/natesales/q/releases/download/v0.11.2/q_0.11.2_darwin_amd64.tar.gz"
+      sha256 "aab7398146cc41ce56780ef788215f8b668f53954be83b6c7adeb2df82545555"
 
       def install
         bin.install "q"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/natesales/q/releases/download/v0.11.1/q_0.11.1_darwin_arm64.tar.gz"
-      sha256 "f1741d5dc2f6a76d2f132e135a8b9f28e6fd5eeb81c31454031023a8296e3a25"
+      url "https://github.com/natesales/q/releases/download/v0.11.2/q_0.11.2_darwin_arm64.tar.gz"
+      sha256 "094488893a4a5ff199d8e08a0a551991826f38974a26486e86bd1d0f63b81d08"
 
       def install
         bin.install "q"
@@ -27,17 +27,17 @@ class Q < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/natesales/q/releases/download/v0.11.1/q_0.11.1_linux_arm64.tar.gz"
-      sha256 "b7a988610859321a1b941031bfa2ff1e5a54fd45269f638d8bc65821297a063e"
+    if Hardware::CPU.intel?
+      url "https://github.com/natesales/q/releases/download/v0.11.2/q_0.11.2_linux_amd64.tar.gz"
+      sha256 "e3f1b9b9b8805289549ca1481d4794b8d2cc644fbcbfcd9d5138791bd36cecdc"
 
       def install
         bin.install "q"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/natesales/q/releases/download/v0.11.1/q_0.11.1_linux_amd64.tar.gz"
-      sha256 "fb08b91a694afd60099f7aa35018306d678e9d2c5c8dc5e97a76cc5ca0dcb869"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/natesales/q/releases/download/v0.11.2/q_0.11.2_linux_arm64.tar.gz"
+      sha256 "74c56b3971e99d4388b44c3b6ca0d2ae741bba4b15d876d478b5432655fa0e2b"
 
       def install
         bin.install "q"
