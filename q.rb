@@ -5,20 +5,20 @@
 class Q < Formula
   desc ""
   homepage "https://github.com/natesales/repo"
-  version "0.11.4"
+  version "0.12.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/natesales/q/releases/download/v0.11.4/q_0.11.4_darwin_arm64.tar.gz"
-      sha256 "d69a803e5cec892d255ca4b2afe2407d2c4643bf321c9fa90483d8a8aa3d16e4"
+      url "https://github.com/natesales/q/releases/download/v0.12.0/q_0.12.0_darwin_arm64.tar.gz"
+      sha256 "347a2e0175ef50e47422cd7f3edd1dc7d4904d038b242892558b2d3a79907937"
 
       def install
         bin.install "q"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/natesales/q/releases/download/v0.11.4/q_0.11.4_darwin_amd64.tar.gz"
-      sha256 "92f3b47f344ce8a12221ffb95949fc0a3a3bfa2261b355eca9467b323361dff0"
+      url "https://github.com/natesales/q/releases/download/v0.12.0/q_0.12.0_darwin_amd64.tar.gz"
+      sha256 "66f90d8d2442a47c76979bcf8c335cd976e7fa537a9c5e461207818d271700ed"
 
       def install
         bin.install "q"
@@ -27,17 +27,17 @@ class Q < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/natesales/q/releases/download/v0.11.4/q_0.11.4_linux_amd64.tar.gz"
-      sha256 "689c9d4921db3c2d508ce34afb6f1991dc17705e13ab1b33710a08c210877abe"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/natesales/q/releases/download/v0.12.0/q_0.12.0_linux_arm64.tar.gz"
+      sha256 "a007f3d9bd8dd1d1f0c0fbf928d568db147066440febc8d22a99554ea767248f"
 
       def install
         bin.install "q"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/natesales/q/releases/download/v0.11.4/q_0.11.4_linux_arm64.tar.gz"
-      sha256 "9322d8e586305ca26d96804e8133f88765ba52794c08018268cf8e9cd231eafe"
+    if Hardware::CPU.intel?
+      url "https://github.com/natesales/q/releases/download/v0.12.0/q_0.12.0_linux_amd64.tar.gz"
+      sha256 "5dd3564383d46791530b43493ce36d519b5ff0d43c297369024b867684293337"
 
       def install
         bin.install "q"
