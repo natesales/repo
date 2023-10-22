@@ -4,17 +4,20 @@ Many of my projects are available as prebuilt packages. I use fury.io as a packa
 
 ### apt
 ```shell
-echo 'deb [trusted=yes] https://repo.natesales.net/apt /' > /etc/apt/sources.list.d/natesales.list
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://repo.natesales.net/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/natesales.gpg
+echo "deb [signed-by=/etc/apt/keyrings/natesales.gpg] https://repo.natesales.net/apt * *" | sudo tee /etc/apt/sources.list.d/natesales.list
 ```
 
 ### yum
 ```
-echo '[natesales] 
+echo '[natesales]
 name=Nate Sales
 baseurl=https://repo.natesales.net/yum/
 enabled=1
-gpgcheck=0
-' > /etc/yum.repos.d/natesales.repo
+gpgcheck=1
+gpgkey=https://repo.natesales.net/apt/gpg.key
+' | sudo tee /etc/yum.repos.d/natesales.repo
 ```
 
 ### brew
