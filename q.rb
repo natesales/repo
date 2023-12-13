@@ -5,20 +5,20 @@
 class Q < Formula
   desc ""
   homepage "https://github.com/natesales/repo"
-  version "0.15.1"
+  version "0.16.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/natesales/q/releases/download/v0.15.1/q_0.15.1_darwin_amd64.tar.gz"
-      sha256 "3826f944c073ab68b76fe25687468bbb7604f3e0033362f1deb23b075bdae17b"
+    if Hardware::CPU.arm?
+      url "https://github.com/natesales/q/releases/download/v0.16.0/q_0.16.0_darwin_arm64.tar.gz"
+      sha256 "2b30d62a38a207e49510abfefc5d34d7c54db31f2f5be8b53025a6d0db940a64"
 
       def install
         bin.install "q"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/natesales/q/releases/download/v0.15.1/q_0.15.1_darwin_arm64.tar.gz"
-      sha256 "d013832c3985fb2ffcbba2b28d1d197461b2cc2500a1adcd465744023fb8e69a"
+    if Hardware::CPU.intel?
+      url "https://github.com/natesales/q/releases/download/v0.16.0/q_0.16.0_darwin_amd64.tar.gz"
+      sha256 "b1a403f88c652df80137db673452802918e1fd86a6e8567c122ac0df21eaca6f"
 
       def install
         bin.install "q"
@@ -28,16 +28,16 @@ class Q < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/natesales/q/releases/download/v0.15.1/q_0.15.1_linux_amd64.tar.gz"
-      sha256 "32c3b04304f8ce076959b6fc5004dae916a5129ce34d7fe9b51932bb1ded8a93"
+      url "https://github.com/natesales/q/releases/download/v0.16.0/q_0.16.0_linux_amd64.tar.gz"
+      sha256 "4cc37e52ac0df4bc6a7e5b459cdbe8148b2b49c2484e8b375dfdced83c547b0a"
 
       def install
         bin.install "q"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/natesales/q/releases/download/v0.15.1/q_0.15.1_linux_arm64.tar.gz"
-      sha256 "cdd2fd6036862b373a0a69436c1524317f0096506869c054d2b94cc33348c6fc"
+      url "https://github.com/natesales/q/releases/download/v0.16.0/q_0.16.0_linux_arm64.tar.gz"
+      sha256 "95e330663fc19ec3d1acb12a50282283b6ebbc9b930c963319f29aa1a7cd489a"
 
       def install
         bin.install "q"
