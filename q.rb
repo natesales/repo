@@ -5,20 +5,20 @@
 class Q < Formula
   desc ""
   homepage "https://github.com/natesales/repo"
-  version "0.19.2"
+  version "0.19.8"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/natesales/q/releases/download/v0.19.2/q_0.19.2_darwin_arm64.tar.gz"
-      sha256 "e52507b2ef48feaee762f3551b137e501c9ece9f6788129b4f49ffdc3ebd28d6"
+    if Hardware::CPU.intel?
+      url "https://github.com/natesales/q/releases/download/v0.19.8/q_0.19.8_darwin_amd64.tar.gz"
+      sha256 "028ef6908ada262c66b2b05ec2f0326ed8e1fd6dfda5513cf208cc052968728b"
 
       def install
         bin.install "q"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/natesales/q/releases/download/v0.19.2/q_0.19.2_darwin_amd64.tar.gz"
-      sha256 "1a3b71d0eb7943f61a983115a79d2b8178ec66d3577430e60662d8e58950762a"
+    if Hardware::CPU.arm?
+      url "https://github.com/natesales/q/releases/download/v0.19.8/q_0.19.8_darwin_arm64.tar.gz"
+      sha256 "39cf313ba20f654fd4d902c69db55a7b597d7e50e7f32fcee2570ee58dbfd80c"
 
       def install
         bin.install "q"
@@ -27,18 +27,16 @@ class Q < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/natesales/q/releases/download/v0.19.2/q_0.19.2_linux_arm64.tar.gz"
-      sha256 "9c97877a243e8693961d7f31dc5ede3d583b1b811f136c4245a21040478cb984"
-
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/natesales/q/releases/download/v0.19.8/q_0.19.8_linux_amd64.tar.gz"
+      sha256 "838485b84b0ca1710373768ece85c6339eaf92be679fc0b0d232af7c5d8790cf"
       def install
         bin.install "q"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/natesales/q/releases/download/v0.19.2/q_0.19.2_linux_amd64.tar.gz"
-      sha256 "e3a0a960592d320eddbef8c4ce2f9df4651fbcb0d9648aa24fbf8f0d7b3aace1"
-
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/natesales/q/releases/download/v0.19.8/q_0.19.8_linux_arm64.tar.gz"
+      sha256 "56e12330674b4fa9bdc32658c82da45615855ca72bb3889eded41454822fe20f"
       def install
         bin.install "q"
       end
