@@ -5,20 +5,20 @@
 class Q < Formula
   desc ""
   homepage "https://github.com/natesales/repo"
-  version "0.19.10"
+  version "0.19.11"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/natesales/q/releases/download/v0.19.10/q_0.19.10_darwin_amd64.tar.gz"
-      sha256 "a9a49f48f61be0ffd4cf931e5b9e4030d73a599082afd64bdfc9dd2eee0ce651"
+      url "https://github.com/natesales/q/releases/download/v0.19.11/q_0.19.11_darwin_amd64.tar.gz"
+      sha256 "6f48b0930d1384988da93436a0df12e2bc52d0c9b1af50b7cb130b5b4a512b89"
 
       def install
         bin.install "q"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/natesales/q/releases/download/v0.19.10/q_0.19.10_darwin_arm64.tar.gz"
-      sha256 "fac9a07cd949988f3797089ee352b0a297f354c2ef953a72c0da4564b0e40a50"
+      url "https://github.com/natesales/q/releases/download/v0.19.11/q_0.19.11_darwin_arm64.tar.gz"
+      sha256 "fc15de51e20d1497ee7af0e4dc70efe003b95b5abcdf478e63eda25cda82283c"
 
       def install
         bin.install "q"
@@ -28,15 +28,15 @@ class Q < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/natesales/q/releases/download/v0.19.10/q_0.19.10_linux_amd64.tar.gz"
-      sha256 "415c12186ba205054a554e6abf0d57ab0712ba9aef64046d6e3dc4ce774db6b6"
+      url "https://github.com/natesales/q/releases/download/v0.19.11/q_0.19.11_linux_amd64.tar.gz"
+      sha256 "829b8d397f284ca17537c299947490e27f504317325b600d8a0d6ecaa9ac8588"
       def install
         bin.install "q"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/natesales/q/releases/download/v0.19.10/q_0.19.10_linux_arm64.tar.gz"
-      sha256 "195317ab752c06b830a3e8a20f6eb9ee303bc6c667caf7076f4a8b93e93dd1e7"
+      url "https://github.com/natesales/q/releases/download/v0.19.11/q_0.19.11_linux_arm64.tar.gz"
+      sha256 "f65cc940deafb574918b1e81d5bccfbe9f45df7097be9d8a2d4c2bfac89dce9a"
       def install
         bin.install "q"
       end
