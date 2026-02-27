@@ -5,22 +5,22 @@
 class Q < Formula
   desc ""
   homepage "https://github.com/natesales/repo"
-  version "0.19.11"
+  version "0.19.12"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/natesales/q/releases/download/v0.19.11/q_0.19.11_darwin_amd64.tar.gz"
-      sha256 "6f48b0930d1384988da93436a0df12e2bc52d0c9b1af50b7cb130b5b4a512b89"
+      url "https://github.com/natesales/q/releases/download/v0.19.12/q_0.19.12_darwin_amd64.tar.gz"
+      sha256 "ddab1798213840510556558d5f7e66fe66dd2b239bc7cd4c3d5fc5b916b6ec15"
 
-      def install
+      define_method(:install) do
         bin.install "q"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/natesales/q/releases/download/v0.19.11/q_0.19.11_darwin_arm64.tar.gz"
-      sha256 "fc15de51e20d1497ee7af0e4dc70efe003b95b5abcdf478e63eda25cda82283c"
+      url "https://github.com/natesales/q/releases/download/v0.19.12/q_0.19.12_darwin_arm64.tar.gz"
+      sha256 "4ac106c317d96199c9b684b1093d7ed0e5bc4e008081cd86d3f017826b437faa"
 
-      def install
+      define_method(:install) do
         bin.install "q"
       end
     end
@@ -28,16 +28,16 @@ class Q < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/natesales/q/releases/download/v0.19.11/q_0.19.11_linux_amd64.tar.gz"
-      sha256 "829b8d397f284ca17537c299947490e27f504317325b600d8a0d6ecaa9ac8588"
-      def install
+      url "https://github.com/natesales/q/releases/download/v0.19.12/q_0.19.12_linux_amd64.tar.gz"
+      sha256 "4adfaa55594a68d8aec60348aaa6345d5232701a1c05ac144ad3fd12dc291f7a"
+      define_method(:install) do
         bin.install "q"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/natesales/q/releases/download/v0.19.11/q_0.19.11_linux_arm64.tar.gz"
-      sha256 "f65cc940deafb574918b1e81d5bccfbe9f45df7097be9d8a2d4c2bfac89dce9a"
-      def install
+      url "https://github.com/natesales/q/releases/download/v0.19.12/q_0.19.12_linux_arm64.tar.gz"
+      sha256 "ac7de2a6aef215789eb077d55c3ada001e2a0c4f858fc8492e95820d8f499ef5"
+      define_method(:install) do
         bin.install "q"
       end
     end
